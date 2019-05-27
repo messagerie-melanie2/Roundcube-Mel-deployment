@@ -38,9 +38,23 @@ mkdir "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION"
 cp -Lr "$MY_PATH"/webmail "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION"/webmail
 cp -R "$MY_PATH"/deploiement/"$TYPE"/* "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION"/webmail/
 cd "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION"/webmail/
+
+# For github remove all config files
+if [ "$TYPE" == "github" ]; then
+	find . -type f -name "config.inc.php" -exec rm -f {} \;
+	rm -rf aide
+	rm -rf changepassword
+	rm -rf fic
+	rm -rf public
+	rm -rf services
+	rm -f google6f1323955b991ee1.html
+	rm -f robots.txt
+fi
+
 composer install --no-dev --optimize-autoloader
+
 cd ..
-tar zcvf "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION".tar.gz webmail/
+tar zcf "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION".tar.gz webmail/
 rm -rf "$MY_PATH"/archives/webmail_"$TYPE"_"$VERSION"
 cd "$MY_PATH"
 git tag -a archive_"$TYPE"_"$VERSION" -m "Archive $TYPE Version $VERSION Build $MY_DATE"

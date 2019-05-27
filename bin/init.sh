@@ -35,16 +35,19 @@ if [ ! -d "$GITHUBFOLDER/Roundcube-plugins-Mel" ]; then
 fi
 
 # Roundcube Mél init repo
-ln -sf "$GITHUBFOLDER/Roundcube-Mel/config" "$DIRWEBMAIL/config"
-ln -sf "$GITHUBFOLDER/Roundcube-Mel/plugins" "$DIRWEBMAIL/plugins"
-ln -sf "$GITHUBFOLDER/Roundcube-Mel/program" "$DIRWEBMAIL/program"
-ln -sf "$GITHUBFOLDER/Roundcube-Mel/skins" "$DIRWEBMAIL/skins"
-ln -sf "$GITHUBFOLDER/Roundcube-Mel/vendor" "$DIRWEBMAIL/vendor"
+ln -sf "$GITHUBFOLDER/Roundcube-Mel/config" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-Mel/plugins" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-Mel/program" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-Mel/skins" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-Mel/vendor" "$DIRWEBMAIL/"
 ln -sf "$GITHUBFOLDER/Roundcube-Mel/index.php" "$DIRWEBMAIL/index.php"
 ln -sf "$GITHUBFOLDER/Roundcube-Mel/version.php" "$DIRWEBMAIL/version.php"
 
 # Roundcube Mél plugins init repo
-ln -sf "$GITHUBFOLDER/Roundcube-plugins-Mel/aide" "$DIRWEBMAIL/aide"
+ln -sf "$GITHUBFOLDER/Roundcube-plugins-Mel/aide" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-plugins-Mel/public" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-plugins-Mel/services" "$DIRWEBMAIL/"
+ln -sf "$GITHUBFOLDER/Roundcube-plugins-Mel/login.php" "$DIRWEBMAIL/login.php"
 
 # Plugins
 for plugin in $(ls $GITHUBFOLDER/Roundcube-plugins-Mel/plugins)

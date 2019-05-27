@@ -6,16 +6,19 @@ cd "$DIR/../webmail"
 DIRWEBMAIL="$( pwd )"
 
 # Roundcube Mél init repo
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/config" "$DIRWEBMAIL/config"
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/plugins" "$DIRWEBMAIL/plugins"
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/program" "$DIRWEBMAIL/program"
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/skins" "$DIRWEBMAIL/skins"
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/vendor" "$DIRWEBMAIL/vendor"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/config" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/plugins" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/program" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/skins" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/vendor" "$DIRWEBMAIL/"
 ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/index.php" "$DIRWEBMAIL/index.php"
 ln -sf "$DIRWEBMAIL/../../github/Roundcube-Mel/version.php" "$DIRWEBMAIL/version.php"
 
 # Roundcube Mél plugins init repo
-ln -sf "$DIRWEBMAIL/../../github/Roundcube-plugins-Mel/aide" "$DIRWEBMAIL/aide"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-plugins-Mel/aide" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-plugins-Mel/public" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-plugins-Mel/services" "$DIRWEBMAIL/"
+ln -sf "$DIRWEBMAIL/../../github/Roundcube-plugins-Mel/login.php" "$DIRWEBMAIL/login.php"
 
 # Plugins
 for plugin in $(ls $DIRWEBMAIL/../../github/Roundcube-plugins-Mel/plugins)
